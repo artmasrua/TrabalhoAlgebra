@@ -19,22 +19,22 @@ public class Main {
 //        System.out.printf("Vetor v = (%.0f, %.0f, %.0f)%n",vetor[0], vetor[1], vetor[2]);
 //        t.translate3D(vetor, 6, 1, 4);
 
-        //Exemplo 03: Rotação em R²:
+//        Exemplo 03: Rotação em R²:
 //        double vetor[] = new double[2];
 //        vetor[0] = 3;
-//        vetor[1] = -4;
+//        vetor[1] = 2;
 //
 //        System.out.printf("Vetor v = (%.0f, %.0f)%n",vetor[0], vetor[1]);
 //        t.rotation2D(vetor, 30);
 
         //Exemplo 04: Rotação em R³ em torno do eixo x
 //        double vetor[] = new double[3];
-//        vetor[0] = 1;
-//        vetor[1] = 2;
+//        vetor[0] = 2;
+//        vetor[1] = 1;
 //        vetor[2] = 3;
-//
-//        System.out.printf("Vetor v = (%.0f, %.0f, %.0f)",vetor[0], vetor[1], vetor[2]);
-//        t.rotation3DX(vetor, 30);
+//        //resultado = (3.6, 1, -0.23)
+//        System.out.printf("Vetor v = (%.0f, %.0f, %.0f)%n",vetor[0], vetor[1], vetor[2]);
+//        t.rotation3DY(vetor, 60);
         //Exemplo 05: Rotação em R³ em torno do eixo y
 //        double vetor[] = new double[3];
 //        vetor[0] = 4;

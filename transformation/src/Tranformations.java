@@ -153,9 +153,9 @@ public class Tranformations {
         double cosAng = Math.cos(Math.toRadians(ang));
         double senAng = Math.sin(Math.toRadians(ang));
         double matrizR[][] = {
-                {cosAng, 0, -senAng, 0},
+                {cosAng, 0, senAng, 0},
                 {  0,    1,    0,    0},
-                {senAng, 0,  cosAng, 0},
+                {-senAng, 0,  cosAng, 0},
                 {0,      0,    0,    1}
         };
 
@@ -167,8 +167,8 @@ public class Tranformations {
             }
         }
         //Imprimindo o resultado
-        System.out.printf("Vetor v rotacionado no eixo x por um angulo de %.0f°%n", ang);
-        System.out.printf("v = (%.3f, %.0f, %.3f)%n", vetorR[0], vetorR[1], vetorR[2]);
+        System.out.printf("Vetor v rotacionado no eixo y por um angulo de %.0f°%n", ang);
+        System.out.printf("v = (%.2f, %.0f, %.2f)%n", vetorR[0], vetorR[1], vetorR[2]);
     }
 
     public void rotation3DZ(double vetor[], float ang) {
@@ -201,7 +201,7 @@ public class Tranformations {
             }
         }
         //Imprimindo o resultado
-        System.out.printf("Vetor v rotacionado no eixo x por um angulo de %.0f°%n", ang);
+        System.out.printf("Vetor v rotacionado no eixo z por um angulo de %.0f°%n", ang);
         System.out.printf("v = (%.3f, %.3f, %.0f)%n", vetorR[0], vetorR[1], vetorR[2]);
     }
 
