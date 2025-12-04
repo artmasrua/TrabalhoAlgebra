@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -66,11 +63,9 @@ public class Main {
         double matrizR[][] = new double[quantSites][quantSites];
         for (int i = 0; i < quantSites; i++) {
             for (int j = 0; j < quantSites; j++) {
-                double soma = 0;
                 for (int k = 0; k < quantSites; k++) {
-                    soma += matrizT[i][k] * matriz[k][j];
+                    matrizR[i][j] += matrizT[i][k] * matriz[k][j];
                 }
-                matrizR[i][j] = soma;
             }
         }
 
@@ -97,7 +92,7 @@ public class Main {
         int ix = 1;
         while (ix <= quantSites) {
             // calcula (A^t) * ak
-            double soma[] = new double[10];
+            double soma[] = new double[quantSites];
             for (int i = 0; i < quantSites; i++) {
                 for (int j = 0; j < quantSites; j++) {
                     soma[i] += matrizR[i][j] * a[j];
@@ -122,9 +117,18 @@ public class Main {
         }
 
         // verificar os sites mais importantes
+        List<Double> sites = new ArrayList<>();
         System.out.println("Valores dos sites");
         for (int i = 0; i < quantSites; i++) {
             System.out.printf("Site %d - %.5f%n", i+1,a[i]);
+            sites.add(a[i]);
+        }
+        
+        Collections.sort(sites);
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("Valores dos sites em ordem decrescente:");
+        for (int i = quantSites - 1; i >= 0; i--) {
+            System.out.printf("%.5f%n", sites.get(i));
         }
     }
 }
